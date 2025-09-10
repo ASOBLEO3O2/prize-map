@@ -1,0 +1,29 @@
+お気に入りのアプリの中から AI を直接お試しください。 … Gemini を使用して下書きを生成したり、コンテンツの質を高めたりすることができます。さらに、Gemini Pro では Google の次世代 AI にアクセスできます。1 か月間、￥2,900 ￥0
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ASOBLE Floor Map</title>
+  <!-- index.html -->
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="bg-layer"></div>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <!-- 左サイド：ダッシュボード（2カラム：左=グラフ, 右=一覧） -->
+  <div id="dashboard-panel" aria-label="Sales Dashboard">
+    <div class="db-header">
+      <label>グラフ種別：
+        <select id="db-graph-type"><option value="composition">機種構成比</option><option value="topn">機種別売上TopN</option></select>
+      </label>
+    </div>
+    <div class="db-inner"><div class="db-graph"><canvas id="db-canvas"></canvas></div><div class="db-stats"><div class="db-table" id="db-table"></div></div></div>
+  </div>
+
+  <!-- エントリポイント -->
+  <script type="module" src="./src/index.js"></script>
+</body>
+</html>
